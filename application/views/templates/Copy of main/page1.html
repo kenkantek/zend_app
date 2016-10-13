@@ -1,0 +1,71 @@
+<{include file="header.html"}>
+
+<body>
+<{include file="preload.html"}>
+<{include file="block_top.html"}>
+
+<div class="wrap">
+
+	<div id="homebox1">
+
+		<div class="homeboxcon">
+		  <div id="submenu">
+			<h3><{$uiVar.initPage.title}></h3>
+
+			<ul>
+			<{foreach from=$uiVar.subPages item=row key=key}>
+                <{if $row.page_unique_title == $uiVar.sub_page_unique_title}>
+                    <li class="menuselected"><a href="<{$modulePath}>page/<{$uiVar.main_page_unique_title}>/<{$row.page_unique_title}>/"><{$row.title}></a></li>
+                <{else}>
+                    <li><a href="<{$modulePath}>page/<{$uiVar.main_page_unique_title}>/<{$row.page_unique_title}>/"><{$row.title}></a></li>
+                <{/if}>
+			<{/foreach}>
+			</ul>
+			</div>
+		</div>
+
+		<div class="homeboxbottom">
+
+		</div>
+
+	</div>
+
+	<div id="contentbox">
+
+		<div id="contentbox_top">
+
+		</div>
+
+		<div id="contentarea">
+
+			<h3><{$uiVar.initPage.title}></h3>
+
+            <br/>
+
+			<{$uiVar.initPage.content}>
+
+		</div>
+
+		<div id="contentbox_bottom">
+
+		</div>
+
+	</div>
+
+	<div class="clr"></div>
+
+	<div style="height:15px"></div>
+
+	<div class="doubledot"></div>
+
+    <{include file='bottom_box.html'}>
+
+
+</div>
+
+<div style="height:28px"></div>
+
+<{include file='footer.html'}>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<{include file=header.html}>
+
+<body>
+<div id="wrap">
+
+	<{include file=menu.html}>
+
+    <div id="content-top-strip"></div>
+  <div id="content-wrapper">
+    <div id="content">
+	  <div id="content-inner">
+      <div class="clr"></div>
+	    <div style="float: left; height: 186px; margin-bottom: 20px;width: 778px;">
+			<img src="<{$smarty.const.WEBSITE_URL}>images/about-banner.jpg" />
+		</div>
+        <div class="clr"></div>
+        <div class="clr"></div>
+        <div id="home-content">
+			<{if count($uiVar.initPage.content) }>
+				<{$uiVar.initPage.content}>
+			<{else}>
+				&nbsp;
+			<{/if}>
+        </div>
+        <div id="content-right">
+
+			<{include file=latest_news.html}>
+
+			<{include file=subscription_box.html}>
+        </div>
+        </div>
+	  </div>
+     </div>
+   </div>
+   <div class="clr"></div>
+   <{include file=footer.html}>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<{if count($list) > 0}>
+<ul>
+<{foreach from=$list item=row key=key}>
+<li class="newsItem" style="width: 100%">&raquo; <a href="<{$modulePath}>news-detail/<{$row.id}>"><{$row.date}> - <{$row.title}></a></li>
+<br />
+<{/foreach}>
+</ul>
+<br/>
+<p align="center"><{$paging}></p>
+<{else}>
+<p>No news</p>
+<{/if}>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><{$pageTitle}></title>
+<script language="javascript">
+	var websiteUrl			= '<{$smarty.const.WEBSITE_URL}>';
+    var resourceDir         = '<{$resourceDir}>';
+	var ajax_loader_image	= '<{$smarty.const.WEBSITE_URL}>images/ajax-loader.gif';
+	var ajaxTimeOut         = '<{$smarty.const.AJAX_TIMEOUT}>';
+	var message_icon		= '<{$resourceDir}>message.png';
+    var controllerPath		= '<{$controllerPath}>';
+	var appVersion			= '<{$smarty.const.APPLICATION_VERSION}>';
+	var fckConfigFile		= resourceDir + "<{$regionPrefix}>_myfckconfig.js?" + appVersion;
+</script>
+<link href="<{$resourceDir}>admin.css?v=<{$smarty.const.APPLICATION_VERSION}>" rel="stylesheet" type="text/css" media="screen, print" />
+<link href="<{$resourceDir}>jquery.lightbox-0.5.css?v=<{$smarty.const.APPLICATION_VERSION}>" rel="stylesheet" type="text/css"/>
+<link href="<{$resourceDir}>redmond/jquery-ui-1.8.6.custom.css?v=<{$smarty.const.APPLICATION_VERSION}>" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js" type="text/javascript"></script>
+<script src="<{$resourceDir}>jquery.lightbox-0.5.js?v=<{$smarty.const.APPLICATION_VERSION}>" type="text/javascript"></script>
+<script src="<{$resourceDir}>ajaxupload/ajaxupload.js?v=<{$smarty.const.APPLICATION_VERSION}>" type="text/javascript"></script>
+<script src="<{$resourceDir}>admin.js?v=<{$smarty.const.APPLICATION_VERSION}>" type="text/javascript"></script>
+<script src="<{$resourceDir}>admin_common.js?v=<{$smarty.const.APPLICATION_VERSION}>" type="text/javascript"></script>
+<script src="<{$smarty.const.WEBSITE_URL}>fckeditor/fckeditor.js?v=<{$smarty.const.APPLICATION_VERSION}>" type="text/javascript"></script>
+</head>

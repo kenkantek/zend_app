@@ -1,0 +1,43 @@
+<div id="footer">
+   <div id="footerleft">
+   <div id="stafflogin">
+	   <{if $staffLogged}>
+	   <a href="<{$modulePath}>staff"><img src="<{$smarty.const.WEBSITE_URL}>images/stafflogin.jpg" title="Staff Login" width="97" height="28" border="0" /></a>
+	   <{else}>
+	   <a href="#" class="staffLogin"><img src="<{$smarty.const.WEBSITE_URL}>images/stafflogin.jpg" title="Staff Login" width="97" height="28" border="0" /></a>
+	   <{/if}>
+   </div>
+<!--   <div id="disclaimer">The information contained in this website (http://www.ironridgeresources.com.au/) has<br />been disclosed pursuant to Rule 26 of the AIM Rules for Companies.</div>-->
+   </div>
+   <div id="footerright">
+   <div id="cancer" title="">
+	   <a href="#" target="_blank"><img src="<{$smarty.const.WEBSITE_URL}>images/twitter.png" border="0" /></a>
+	   <a href="#" target="_blank"><img src="<{$smarty.const.WEBSITE_URL}>images/youtube.png" border="0" /></a>
+   </div>
+   <div id="copyright"><em>Copyright 2013</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<{$modulePath}>faq/">FAQ</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<{$modulePath}>privacy/">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<{$modulePath}>page/contact-us/">Contact Us</a></div>
+   </div>
+</div>
+<{if !$staffLogged}>
+<div style="display: none">
+	<div id="staffLoginBox" style="width: 400px;height: 200px;">
+		<h2>Staff Login</h2>
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input name="staffUsername" id="staffUsername" /></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input name="staffPassword" id="staffPassword" type="password" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="button" value="Login" id="doLoginStaff" />
+					<input type="button" value="Close" id="doCloseBox" />
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<{/if}>

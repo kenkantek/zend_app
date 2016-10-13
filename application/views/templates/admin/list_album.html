@@ -1,0 +1,42 @@
+<{if count($list) == 0}>
+    No record(s) found
+<{else}>
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+  <tr>
+	<td><strong>Name</strong></td>
+	<td><strong>Name French</strong></td>
+    <td><strong>Album Cover</strong></td>
+	<td><strong>Status</strong></td>
+	<td><strong>Date Created</strong></td>
+	<td><strong>Order Num</strong></td>
+	<td><strong>Album Order</strong></td>
+    <td width=""><strong>Action</strong></td>
+  </tr>
+  <{foreach from=$list item=row key=key}>
+  <tr>
+    <td colspan="9"><hr size="1" color="#c5c6c8" /></td>
+  </tr>
+  <tr>
+	<td><{$row.name}></td>
+	<td><{$row.name_fr}></td>
+	<td>
+		<a href="<{$helper->getImageUrl($row.image)}>" class="lightbox">
+			<img class="lightbox" src="<{$helper->getImageUrl($row.image)}>" width="<{$smarty.const.ALBUM_IMAGE_WIDTH}>" height="<{$smarty.const.ALBUM_IMAGE_HEIGHT}>"/>
+		</a>
+	</td>
+	<td><{$helper->getStatusText($row.status)}></td>
+    <td><{$row.date_created}></td>
+	<td><{$row.order_num}></td>
+	<td>
+		<a href="#" class="upAlbum" rel="<{$row.id}>"><img src="<{$resourceDir}>up.png" title="Move Up" width="30" height="30" /></a>
+        <a href="#" class="downAlbum" rel="<{$row.id}>"><img src="<{$resourceDir}>down.png" title="Move Down" width="30" height="30" /></a>
+    </td>
+    <td>
+        <a href="#" class="editAlbum" rel="<{$row.id}>"><img src="<{$resourceDir}>edit.png" width="30" height="30" title="Edit" /></a>
+        <a href="#" class="deleteAlbum" rel="<{$row.id}>"><img src="<{$resourceDir}>delete.png" width="30" height="29" title="Delete"  /></a>
+    </td>
+  </tr>
+  <{/foreach}>
+</table>
+<p align="center"><{$paging}></p>
+<{/if}>

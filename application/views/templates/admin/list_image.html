@@ -1,0 +1,46 @@
+<{if count($list) == 0}>
+    No record(s) found
+<{else}>
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+  <tr>
+	<td><strong>Title</strong></td>
+    <td><strong>Image</strong></td>
+	<td><strong>Description</strong></td>
+	<td><strong>Album</strong></td>
+	<td><strong>Date Created</strong></td>
+	<{if $albumSelected}>
+	<td><strong>Order num</strong></td>
+	<td><strong>Image Order</strong></td>
+	<{/if}>
+    <td width=""><strong>Action</strong></td>
+  </tr>
+  <{foreach from=$list item=row key=key}>
+  <tr>
+    <td colspan="8"><hr size="1" color="#c5c6c8" /></td>
+  </tr>
+  <tr>
+	<td><{$row.title}><br/><{$row.title_fr}></td>
+	<td>
+		<a href="<{$helper->getImageUrl($row.image)}>" class="lightbox">
+			<img class="lightbox" src="<{$helper->getImageUrl($row.image)}>" width="100" />
+		</a>
+	</td>
+	<td><{$row.description}></td>
+	<td><{$row.albumName}></td>
+    <td><{$row.date_created}></td>
+	<{if $albumSelected}>
+	<td><{$row.order_num}></td>
+	<td>
+		<a href="#" class="upImage" rel="<{$row.id}>"><img src="<{$resourceDir}>up.png" title="Move Up" width="30" height="30" /></a>
+        <a href="#" class="downImage" rel="<{$row.id}>"><img src="<{$resourceDir}>down.png" title="Move Down" width="30" height="30" /></a>
+    </td>
+	<{/if}>
+    <td>
+        <a href="#" class="editImage" rel="<{$row.id}>"><img src="<{$resourceDir}>edit.png" width="30" height="30" title="Edit" /></a>
+        <a href="#" class="deleteImage" rel="<{$row.id}>"><img src="<{$resourceDir}>delete.png" width="30" height="29" title="Delete"  /></a>
+    </td>
+  </tr>
+  <{/foreach}>
+</table>
+<p align="center"><{$paging}></p>
+<{/if}>

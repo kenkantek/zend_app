@@ -1,0 +1,31 @@
+<{if count($list) == 0}>
+    No record(s) found
+<{else}>
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+  <tr>
+	<td><strong>Username</strong></td>
+    <td><strong>Email</strong></td>
+    <td><strong>Name</strong></td>
+	<td><strong>Status</strong></td>
+	<td><strong>Date Created</strong></td>
+    <td width="140"><strong>Action</strong></td>
+  </tr>
+  <{foreach from=$list item=row key=key}>
+  <tr>
+    <td colspan="8"><hr size="1" color="#c5c6c8" /></td>
+  </tr>
+  <tr>
+	<td><{$row.username}></td>
+    <td><{$row.email}></td>
+	<td><{$row.firstname}> <{$row.lastname}></td>
+	<td><{$helper->getStateStatus($row.status,$row.id)}></td>
+    <td><{$row.date_created}></td>
+    <td>
+        <a href="#" class="edit" rel="<{$row.id}>"><img src="<{$resourceDir}>edit.png" width="30" height="30" title="Edit" /></a>
+<!--        <a href="#" class="delete" rel="<{$row.id}>"><img src="<{$resourceDir}>delete.png" width="30" height="29" title="Delete"  /></a>-->
+    </td>
+  </tr>
+  <{/foreach}>
+</table>
+<p align="center"><{$paging}></p>
+<{/if}>

@@ -1,0 +1,37 @@
+<{if count($list) == 0}>
+    No image found
+<{else}>
+<table width="660" border="0" cellspacing="0" cellpadding="2">
+  <tr>
+    <td><strong>Image</strong></td>
+	<td><strong>Url</strong></td>
+	<td width="80"><strong>Page Order</strong></td>
+    <td width="70"><strong>Action</strong></td>
+  </tr>
+  <{foreach from=$list item=row key=key}>
+  <tr>
+    <td colspan="3"><hr size="1" color="#c5c6c8" /></td>
+  </tr>
+  <tr>
+    <td>
+		<a href="<{$helper->getImageUrl($row.image)}>" class="lightbox">
+			<img src="<{$helper->getImageUrl($row.image)}>" width="80" /><br/>
+			View Large
+		</a>
+	</td>
+	<td>
+		<a href="<{$row.url}>" target="_blank"><{$row.url}></a>
+	</td>
+	<td>
+        <a href="#" class="up" rel="<{$row.id}>"><img src="<{$resourceDir}>up.png" width="30" height="30" /></a>
+        <a href="#" class="down" rel="<{$row.id}>"><img src="<{$resourceDir}>down.png" width="30" height="30" /></a>
+    </td>
+    <td>
+        <a href="#" class="edit" rel="<{$row.id}>"><img src="<{$resourceDir}>edit.png" width="30" height="29" /></a>
+        <a href="#" class="delete" rel="<{$row.id}>"><img src="<{$resourceDir}>delete.png" width="30" height="29" /></a>
+    </td>
+  </tr>
+  <{/foreach}>
+</table>
+<{/if}>
+<p align="center"><{$paging}></p>

@@ -1,0 +1,37 @@
+<form id="frmAdd" method="post">
+<table cellspacing="2" cellpadding="2" border="0" width="100%">
+            <tbody>
+              <td>First Name</td>
+              <td><input id="firstname" name="firstname" value="<{$row.firstname}>" size="50" /></td>
+            </tr>
+            <tr>
+              <td>Last Name</td>
+              <td><input id="lastname" name="lastname" value="<{$row.lastname}>" size="50" /></td>
+            </tr>
+			<tr>
+              <td>Phone</td>
+              <td><input id="phone" name="phone" value="<{$row.phone}>"  size="50" /></td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td><input id="email" name="email" value="<{$row.email}>" size="50" /></td>
+            </tr>
+			<tr>
+              <td>Username</td>
+              <td><input id="username" name="username" value="<{$row.username}>" size="50" /></td>
+            </tr>
+			<tr>
+              <td>Password</td>
+              <td><input id="password" name="password" size="50" /> (leave blank to keep current)</td>
+            </tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Update" id="submit" name="submit">
+					<input type="button" value="Reset" id="resetFormEdit" name="resetFormEdit">
+				</td>
+			</tr>
+</table>
+	<input type="hidden" value="<{$row.id}>" name="current_page_id" id="current_page_id" />
+</form>
+<div id="savingContent"></div>

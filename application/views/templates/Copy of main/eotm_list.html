@@ -1,0 +1,11 @@
+<h3>Employer of the Month  - <{$yearShow}></h3>
+<br/>
+<{if count($list) > 0}>
+<{foreach from=$list item=row key=key}>
+	<p class="bluetext"><{$eotmHelper->getMonthName($row.month)}> <{$row.year}> - <a href="<{$modulePath}>eotm-detail/<{$row.id}>"><{$row.title}></a></p>
+<{/foreach}>
+<br/>
+<p align="center"><{$paging}></p>
+<{else}>
+<p>No record found</p>
+<{/if}>

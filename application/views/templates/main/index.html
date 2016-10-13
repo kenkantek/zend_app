@@ -1,0 +1,72 @@
+<{include file=header.html}>
+
+<body>
+<div class="site">
+<div id="wrap">
+
+	<{include file=menu.html}>
+
+    <div id="content-top-strip"></div>
+  <div id="content-wrapper">
+    <div id="content">
+	  <div id="content-inner">
+      <div class="clr"></div>
+
+	    <{if count($slideBanner ) > 0}>
+		<div id="home-main-img">
+			<div id="slide_home">
+				<div class="container">
+					<div class="slides">
+						<{$slideBanner.slides}>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<{else}>
+		<div id="home-main-img">
+			<img src="<{$smarty.const.WEBSITE_URL}>images/home.jpg" width="780" height="350" />
+		</div>
+		<{/if}>
+
+
+
+        <div id="home-content">
+			<{if count($uiVar.homeContent) }>
+				<{$uiVar.homeContent}>
+			<{else}>
+				&nbsp;
+			<{/if}>
+			
+			<{$uiVar.rssWidget}>
+        </div>
+        <div id="content-right">
+
+        	<div id="home-right-col">
+        <div id="btn-project-areas"><a href="<{$modulePath}>page/project-areas/"><img src="<{$smarty.const.WEBSITE_URL}>images/btn-project-areas.jpg" title="Discover our Project Areas" border="0" /></a></div>
+        <div id="btn-investor-centre"><a href="<{$modulePath}>subscription/"><img src="<{$smarty.const.WEBSITE_URL}>images/btn-investor-centre.jpg" title="Visit our Investor Centre" border="0" /></a></div>
+
+			<!--<a href="<{$modulePath}>page/investor-centre/share-price-chart/">
+            <div id="share-price">
+			   <{$uiVar.sharePriceChart.lastPrice}>p
+               </div>
+			</a>-->
+
+        </div>
+
+			<{include file=latest_news.html}>
+
+			<{include file=subscription_box.html}>
+        </div>
+
+        <div class="clr"></div>
+
+        </div>
+	  </div>
+     </div>
+   </div>
+   <div class="clr"></div>
+   <{include file=footer.html}>
+</div>
+</body>
+</html>

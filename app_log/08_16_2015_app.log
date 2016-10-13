@@ -1,0 +1,84 @@
+2015-08-16T04:51:20+00:00 EMERG (0): Can not get new lists. query 	SELECT	id,
+										date as date_order,
+										DATE_FORMAT(date,'%d-%m-%Y') as date,
+										DATE_FORMAT(date_created,'%d-%m-%Y') as date_created,
+										DATE_FORMAT(date_modified,'%d-%m-%Y') as date_modified,
+										title,
+										title_fr
+									FROM news
+									ORDER BY date_order DESC , id DESC
+									LIMIT 0,20. Error trace :SQLSTATE[42S22]: Column not found: 1054 Unknown column 'title_fr' in 'field list'
+2015-08-16T04:51:22+00:00 EMERG (0): Can not get new lists. query 	SELECT	id,
+										date as date_order,
+										DATE_FORMAT(date,'%d-%m-%Y') as date,
+										DATE_FORMAT(date_created,'%d-%m-%Y') as date_created,
+										DATE_FORMAT(date_modified,'%d-%m-%Y') as date_modified,
+										title,
+										title_fr
+									FROM news
+									ORDER BY date_order DESC , id DESC
+									LIMIT 0,20. Error trace :SQLSTATE[42S22]: Column not found: 1054 Unknown column 'title_fr' in 'field list'
+2015-08-16T04:51:24+00:00 EMERG (0): Can not get new lists. query 	SELECT	id,
+										date as date_order,
+										DATE_FORMAT(date,'%d-%m-%Y') as date,
+										DATE_FORMAT(date_created,'%d-%m-%Y') as date_created,
+										DATE_FORMAT(date_modified,'%d-%m-%Y') as date_modified,
+										title,
+										title_fr
+									FROM news
+									ORDER BY date_order DESC , id DESC
+									LIMIT 0,20. Error trace :SQLSTATE[42S22]: Column not found: 1054 Unknown column 'title_fr' in 'field list'
+2015-08-16T04:51:25+00:00 EMERG (0): Can not get new lists. query 	SELECT	id,
+										date as date_order,
+										DATE_FORMAT(date,'%d-%m-%Y') as date,
+										DATE_FORMAT(date_created,'%d-%m-%Y') as date_created,
+										DATE_FORMAT(date_modified,'%d-%m-%Y') as date_modified,
+										title,
+										title_fr
+									FROM news
+									ORDER BY date_order DESC , id DESC
+									LIMIT 0,20. Error trace :SQLSTATE[42S22]: Column not found: 1054 Unknown column 'title_fr' in 'field list'
+2015-08-16T11:07:04+00:00 NOTICE (5): Untranslated message within 'en': STAFT_ENTER_USERNAME
+2015-08-16T11:07:04+00:00 NOTICE (5): Untranslated message within 'en': STAFT_ENTER_PASSWORD
+2015-08-16T11:11:09+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:11:09+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:11:29+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:11:29+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:11:31+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:11:31+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:11:36+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:11:36+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:12:16+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:12:16+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:13:05+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:13:05+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:13:39+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:13:39+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:15:24+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:15:24+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:16:27+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:16:27+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:18:24+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:18:24+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:18:31+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:18:31+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:18:41+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:18:41+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:21:31+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:21:31+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:23:33+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:23:33+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:25:26+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:25:26+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:27:12+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:27:12+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:27:17+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:27:17+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:28:15+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:28:15+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:28:20+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:28:20+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:28:33+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:28:33+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD
+2015-08-16T11:30:00+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_USERNAME
+2015-08-16T11:30:00+00:00 NOTICE (5): Untranslated message within 'fr': STAFT_EMPTY_PASSWORD

@@ -1,0 +1,95 @@
+<{include file=header.html}>
+
+<body>
+<div class="site">
+<div id="wrap">
+
+	<{include file=menu.html}>
+
+    <div id="content-top-strip"></div>
+  <div id="content-wrapper">
+    <div id="content">
+	  <div id="content-inner">
+      <div class="clr"></div>
+	    <div style="float: left; height: 186px; margin-bottom: 20px;width: 778px;">
+			<img src="<{$smarty.const.WEBSITE_URL}>images/<{$uiVar.headerImage}>" />
+		</div>
+        <div class="clr"></div>
+        <div class="clr"></div>
+        <div id="home-content">
+			<{if count($uiVar.initPage.content) }>
+				<{$uiVar.initPage.content}>
+			<{else}>
+				&nbsp;
+			<{/if}>
+			<{if $uiVar.sharePriceChart && 1==0}>
+				<table border="0" width="100%">
+
+					<tbody>
+
+					  <tr>
+
+						<td colspan="8"><div align="center">Solomon Gold Current Share Price - 20 Minute Delay</div></td>
+
+					  </tr>
+
+					  <tr>
+
+						<td><div align="center"><strong>Last Price </strong></div></td>
+
+						<td><div align="center"><strong>Change</strong></div></td>
+
+						<td><div align="center"><strong>Open</strong></div></td>
+
+						<td><div align="center"><strong>High</strong></div></td>
+
+						<td><div align="center"><strong>Low</strong></div></td>
+
+						<td><div align="center"><strong>Volume</strong></div></td>
+
+					  </tr>
+
+					  <tr>
+
+						<td><div align="center"><{$uiVar.sharePriceChart.lastPrice}></div></td>
+
+						<td><div align="center"><{$uiVar.sharePriceChart.change}></div></td>
+
+						<td><div align="center"><{$uiVar.sharePriceChart.open}></div></td>
+
+						<td><div align="center"><{$uiVar.sharePriceChart.high}></div></td>
+
+						<td><div align="center"><{$uiVar.sharePriceChart.low}></div></td>
+
+						<td><div align="center"><{$uiVar.sharePriceChart.volume}></div></td>
+
+					  </tr>
+
+					</tbody>
+
+				  </table>
+
+				  <p align="center">
+					<!-- <img src="http://chart.finance.yahoo.com/c/6m/d/solg.l" width="512" height="288" border="1" /> -->
+					</p>
+			<{/if}>
+        </div>
+        <div id="content-right">
+
+			<div id="home-right-col">
+				<div id="btn-project-areas"><a href="<{$modulePath}>page/project-areas/"><img src="<{$smarty.const.WEBSITE_URL}>images/btn-project-areas.jpg" title="Discover our Project Areas" border="0" /></a></div>
+			</div>
+
+			<{include file=latest_news.html}>
+
+			<{include file=subscription_box.html}>
+        </div>
+        </div>
+	  </div>
+     </div>
+   </div>
+   <div class="clr"></div>
+   <{include file=footer.html}>
+</div>
+</body>
+</html>

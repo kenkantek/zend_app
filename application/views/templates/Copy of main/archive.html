@@ -1,0 +1,68 @@
+<{include file="header.html"}>
+
+<body>
+<{include file="preload.html"}>
+<{include file="block_top.html"}>
+
+<div class="wrap">
+
+	<div id="homebox1">
+
+		<div class="homeboxcon">
+		  <div id="submenu">
+			<h3>News</h3>
+
+			<ul>
+                <li><a href="<{$modulePath}>latest-news/">Current News</a></li>
+                <li class="menuselected"><a href="<{$modulePath}>archive/">Archive</a></li>
+            </ul>
+			</div>
+		</div>
+
+		<div class="homeboxbottom">
+
+		</div>
+
+	</div>
+
+	<div id="contentbox">
+
+		<div id="contentbox_top">
+
+		</div>
+
+		<div id="events-contentarea">
+                <h3>News Archives</h3>
+                <br/>
+                <div id="newsContainer">
+
+				</div>
+		</div>
+
+		<div id="contentbox_bottom">
+
+		</div>
+
+	</div>
+
+	<div class="clr"></div>
+
+	<div style="height:15px"></div>
+
+	<div class="doubledot"></div>
+
+    <{include file='bottom_box.html'}>
+
+
+</div>
+
+<div style="height:28px"></div>
+
+<{include file='footer.html'}>
+
+</body>
+</html>
+<script language="javascript">
+	var news_list_process_page = '<{$modulePath}>show/news/list/';
+</script>
+<script src="<{$smarty.const.WEBSITE_URL}>js/news.js?v=<{$smarty.const.APPLICATION_VERSION}>" type="text/javascript"></script>

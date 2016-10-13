@@ -1,0 +1,68 @@
+<{include file="header.html"}>
+
+<body>
+<{include file="preload.html"}>
+<{include file="block_top.html"}>
+
+<div class="wrap">
+
+	<div id="homebox1">
+
+		<div class="homeboxcon">
+		  <div id="submenu">
+			<h3>Employer of the Month</h3>
+			<{$yearList}>
+			</div>
+		</div>
+
+		<div class="homeboxbottom">
+
+		</div>
+
+	</div>
+
+	<div id="contentbox">
+
+		<div id="contentbox_top">
+
+		</div>
+
+		<!-- don't change this id , else js will wrong -->
+		<div id="events-contentarea">
+			
+			<h3><{$eotmHelper->getMonthName($uiVar.row.month)}> <{$uiVar.row.year}> - <{$uiVar.row.title}></h3>
+
+			<p>
+				<img width="580" src="<{$smarty.const.EOTM_FILES_URL}><{$uiVar.row.image}>" />
+			</p>
+			<{$uiVar.row.content}>
+		</div>
+
+		<div id="contentbox_bottom">
+
+		</div>
+
+	</div>
+
+	<div class="clr"></div>
+
+	<div style="height:15px"></div>
+
+	<div class="doubledot"></div>
+
+    <{include file='bottom_box.html'}>
+
+
+</div>
+
+<div style="height:28px"></div>
+
+<{include file='footer.html'}>
+
+</body>
+</html>
+<script language="javascript">
+	var process_path = '<{$modulePath}>show/eotm/list/';
+	var currentYear = -1;
+</script>
+<script src="<{$smarty.const.WEBSITE_URL}>js/eotm.js?v=<{$smarty.const.APPLICATION_VERSION}>" type="text/javascript"></script>

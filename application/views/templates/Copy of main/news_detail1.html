@@ -1,0 +1,63 @@
+<{include file="header.html"}>
+
+<body>
+<{include file="preload.html"}>
+<{include file="block_top.html"}>
+
+<div class="wrap">
+
+	<div id="homebox1">
+
+		<div class="homeboxcon">
+		  <div id="submenu">
+			<h3>News</h3>
+
+			<ul>
+                <li class="menuselected"><a href="<{$modulePath}>latest-news/">Current News</a></li>
+                <li><a href="<{$modulePath}>archive/">Archive</a></li>
+            </ul>
+			</div>
+		</div>
+
+		<div class="homeboxbottom">
+
+		</div>
+
+	</div>
+
+	<div id="contentbox">
+
+		<div id="contentbox_top">
+
+		</div>
+
+		<div id="events-contentarea">
+                <h3><{$uiVar.row.date}> - <{$uiVar.row.title}></h3>
+                <br/>
+                <{$uiVar.row.content}>
+				<p><a class="bluetext" href="<{$modulePath}>latest-news/">» Back to Latest News</a>
+		</div>
+
+		<div id="contentbox_bottom">
+
+		</div>
+
+	</div>
+
+	<div class="clr"></div>
+
+	<div style="height:15px"></div>
+
+	<div class="doubledot"></div>
+
+    <{include file='bottom_box.html'}>
+
+
+</div>
+
+<div style="height:28px"></div>
+
+<{include file='footer.html'}>
+
+</body>
+</html>

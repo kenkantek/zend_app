@@ -1,0 +1,9 @@
+<{if count($list) > 0}>
+<{foreach from=$list item=row key=key}>
+	<p class="bluetext"><{$row.date}> - <a href="<{$modulePath}>archive-detail/<{$row.id}>"><{$row.title}></a></p>
+<{/foreach}>
+<br/>
+<p align="center"><{$paging}></p>
+<{else}>
+<p>No news archives found</p>
+<{/if}>

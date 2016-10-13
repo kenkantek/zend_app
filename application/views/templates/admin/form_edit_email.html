@@ -1,0 +1,43 @@
+<form id="frmAdd">
+<table width="100%" cellspacing="2" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+            <td><strong>Type</strong></td>
+            <td>
+				<select id="type" name="type">
+				   <{foreach from=$typeList item=loopRow key=key}>
+						<{if $key == $row.type}>
+							<option value="<{$key}>" selected="selected"><{$loopRow}></option>
+						<{else}>
+							<option value="<{$key}>"><{$loopRow}></option>
+						<{/if}>
+				   <{/foreach}>
+				</select>
+			</td>
+          </tr>
+           <tr>
+            <td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+          <tr>
+            <td><strong>Email</strong></td>
+            <td><input type="text" size="50" id="email" name="email" maxlength="80" value="<{$row.email|escape:'html'}>" ></td>
+          </tr>
+          <tr>
+            <td><strong>Name</strong></td>
+            <td><input type="text" size="50" id="name" name="name" maxlength="80" value="<{$row.name|escape:'html'}>" ></td>
+          </tr>
+          <tr>
+			<td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+        <tr>
+            <td align="right" colspan="2">
+				<input type="submit" value="Update" id="submit" name="submit">
+                <input type="button" value="Reset" id="resetFormEdit" name="resetFormEdit">
+            </td>
+        </tr>
+       </tbody>
+</table>
+	<input type="hidden" value="<{$row.id}>" name="current_page_id" id="current_page_id" />
+	<input type="hidden" value="<{$row.email}>" name="current_email" id="current_email" />
+</form>
+<div id="savingContent"></div>

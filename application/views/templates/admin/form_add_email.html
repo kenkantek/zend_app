@@ -1,0 +1,35 @@
+<form id="frmAdd">
+<table width="100%" cellspacing="2" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+            <td><strong>Type</strong></td>
+            <td>
+				<select id="type" name="type">
+				   <{foreach from=$typeList item=row key=key}>
+						<option value="<{$key}>"><{$row}></option>
+				   <{/foreach}>
+				</select>
+			</td>
+          </tr>
+           <tr>
+            <td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+          <tr>
+            <td><strong>Email</strong></td>
+            <td><input type="text" size="50" id="email" name="email" maxlength="80"></td>
+          </tr>
+          <tr>
+            <td><strong>Name</strong></td>
+            <td><input type="text" size="50" id="name" name="name" maxlength="80"></td>
+          </tr>
+          <tr>
+			<td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+        <tr>
+            <td align="right" colspan="2">
+                <input type="submit" value="Save" id="submit" name="submit"></td>
+        </tr>
+       </tbody>
+</table>
+</form>
+<div id="savingContent"></div>

@@ -1,0 +1,41 @@
+<{include file=header.html}>
+
+<body>
+<div id="wrap">
+
+	<{include file=menu.html}>
+
+    <div id="content-top-strip"></div>
+  <div id="content-wrapper">
+    <div id="content">
+	  <div id="content-inner">
+      <div class="clr"></div>
+	    <div id="home-main-img"><img src="<{$smarty.const.WEBSITE_URL}>images/home.jpg" width="510" height="344" /></div>
+        <div id="home-right-col">
+        <div id="btn-project-areas"><a href="<{$modulePath}>project-areas/"><img src="<{$smarty.const.WEBSITE_URL}>images/btn-project-areas.jpg" title="Discover our Project Areas" width="245" height="110" border="0" /></a></div>
+        <div id="btn-investor-centre"><a href="<{$modulePath}>investor-centre/"><img src="<{$smarty.const.WEBSITE_URL}>images/btn-investor-centre.jpg" title="Visit our Investor Centre" width="245" height="110" border="0" /></a></div>
+        <div id="share-price"></div>
+        </div>
+        <div class="clr"></div>
+        <div id="home-content">
+			<{if count($uiVar.homeContent) }>
+				<{$uiVar.homeContent}>
+			<{else}>
+				&nbsp;
+			<{/if}>
+        </div>
+        <div id="content-right">
+
+			<{include file=latest_news.html}>
+
+			<{include file=subscription_box.html}>
+        </div>
+        </div>
+	  </div>
+     </div>
+   </div>
+   <div class="clr"></div>
+   <{include file=footer.html}>
+</div>
+</body>
+</html>

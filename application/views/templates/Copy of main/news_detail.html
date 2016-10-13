@@ -1,0 +1,37 @@
+<{include file=header.html}>
+
+<body>
+<div id="wrap">
+
+	<{include file=menu.html}>
+
+    <div id="content-top-strip"></div>
+  <div id="content-wrapper">
+    <div id="content">
+	  <div id="content-inner">
+      <div class="clr"></div>
+	    <div style="float: left; height: 186px; margin-bottom: 20px;width: 778px;">
+			News details header image
+		</div>
+        <div class="clr"></div>
+        <div class="clr"></div>
+        <div id="home-content">
+			<h3><{$uiVar.row.date}> - <{$uiVar.row.title}></h3>
+			<br/>
+			<{$uiVar.row.content}>
+        </div>
+        <div id="content-right">
+
+			<{include file=latest_news.html}>
+
+			<{include file=subscription_box.html}>
+        </div>
+        </div>
+	  </div>
+     </div>
+   </div>
+   <div class="clr"></div>
+   <{include file=footer.html}>
+</div>
+</body>
+</html>

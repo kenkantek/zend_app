@@ -1,0 +1,47 @@
+<{include file=header.html}>
+
+<body>
+<div class="site">
+<div id="wrap">
+
+	<{include file=menu.html}>
+
+    <div id="content-top-strip"></div>
+  <div id="content-wrapper">
+    <div id="content">
+	  <div id="content-inner">
+      <div class="clr"></div>
+	    <div style="float: left; height: 186px; margin-bottom: 20px;width: 778px;">
+			<img src="<{$smarty.const.WEBSITE_URL}>images/<{$uiVar.headerImage}>" />
+		</div>
+        <div class="clr"></div>
+        <div id="home-content">
+			<h2>News</h2>
+			<br/>
+			<div id="newsContainer"></div>
+        </div>
+        <div id="content-right">
+
+
+
+			<div id="home-right-col">
+				<div id="btn-project-areas"><a href="<{$modulePath}>page/project-areas/"><img src="<{$smarty.const.WEBSITE_URL}>images/btn-project-areas.jpg" title="Discover our Project Areas" border="0" /></a></div>
+			</div>
+
+			<{include file=latest_news.html}>
+
+			<{include file=subscription_box.html}>
+        </div>
+        </div>
+	  </div>
+     </div>
+   </div>
+   <div class="clr"></div>
+   <{include file=footer.html}>
+   <script language="javascript">
+		var news_list_process_page = '<{$modulePath}>show/news/list/';
+	</script>
+   <script type="text/javascript" src="<{$smarty.const.WEBSITE_URL}>js/news.js"></script>
+</div>
+</body>
+</html>

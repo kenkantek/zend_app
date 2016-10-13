@@ -1,0 +1,51 @@
+<?php /* Smarty version 2.6.22, created on 2015-08-16 04:38:13
+         compiled from form_add_other_page.html */ ?>
+<form id="frmAdd">
+<table width="100%" cellspacing="2" cellpadding="0" border="0">
+          <tbody><tr>
+            <td><strong>Type</strong></td>
+            <td>
+				<input type="hidden" id="type" name="type" value="user-added" />
+			</td>
+          </tr>
+           <tr>
+            <td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+          <tr>
+            <td><strong>Title</strong></td>
+            <td><input type="text" size="50" id="title" name="title" value=""></td>
+          </tr>
+		  <tr>
+            <td><strong>Title French</strong></td>
+            <td><input type="text" size="50" id="title_fr" name="title_fr" value=""></td>
+          </tr>
+		  <tr>
+			  <td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+          <tr>
+            <td><strong>Content</strong></td>
+            <td>
+                <textarea id="content" name="content"></textarea>
+            </td>
+          </tr>
+		  <tr>
+            <td><strong>Content French</strong></td>
+            <td>
+                <textarea id="content_fr" name="content_fr"></textarea>
+            </td>
+          </tr>
+          <tr>
+			  <td colspan="2" height="20">
+				  <hr size="1" color="#ccccc">
+				  <input type="hidden" id="link" name="link" value="" />
+			  </td>
+          </tr>
+        <tr>
+            <td align="right" colspan="2">
+                <input type="submit" value="Add" id="submit" name="submit">
+            </td>
+        </tr>
+       </tbody>
+</table>
+</form>
+<div id="savingContent"></div>

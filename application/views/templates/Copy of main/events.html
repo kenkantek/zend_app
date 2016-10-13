@@ -1,0 +1,68 @@
+<{include file="header.html"}>
+
+<body>
+<{include file="preload.html"}>
+<{include file="block_top.html"}>
+
+<div class="wrap">
+
+	<div id="homebox1">
+
+		<div class="homeboxcon">
+		  <div id="calendar">
+			<h3>Calendar</h3>
+				<div id="calendar-container">
+				</div>
+			
+			<p style="padding-left: 15px;"><a href="<{$modulePath}>events/">» View all events here</a></p>
+			</div>
+		</div>
+
+		<div class="homeboxbottom">
+
+		</div>
+
+	</div>
+
+	<div id="events-contentbox">
+
+		<div id="contentbox_top">
+
+		</div>
+
+		<div id="events-contentarea">
+                <h3>Events</h3>
+                <br/>
+                <{foreach from=$uiVar.list item=row key=key}>
+                    <p class="bluetext"><{$row.start_date}> - <{$row.end_date}> - <a href="<{$modulePath}>events-detail/<{$row.id}>"><{$row.title}></a></p>
+                <{/foreach}>
+		</div>
+
+		<div id="contentbox_bottom">
+
+		</div>
+
+	</div>
+
+	<div class="clr"></div>
+
+	<div style="height:15px"></div>
+
+	<div class="doubledot"></div>
+
+    <{include file='bottom_box.html'}>
+
+
+</div>
+
+<div style="height:28px"></div>
+
+<{include file='footer.html'}>
+
+</body>
+</html>
+<script language="javascript">
+	var ajax_loader_image	= '<{$smarty.const.WEBSITE_URL}>images/ajax-loader_bg.gif';
+	var calendar_process_page = '<{$modulePath}>events/get-calendar/';
+</script>
+<script src="<{$smarty.const.WEBSITE_URL}>js/events.js?v=<{$smarty.const.APPLICATION_VERSION}>" type="text/javascript"></script>

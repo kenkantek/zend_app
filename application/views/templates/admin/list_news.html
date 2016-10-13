@@ -1,0 +1,39 @@
+<{if count($list) == 0}>
+    No record(s) found
+<{else}>
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+  <tr>
+    <td><strong>Title</strong></td>
+	<td><strong>Title French</strong></td>
+    <td><strong>Date</strong></td>
+    <td><strong>Date Created</strong></td>
+    <td><strong>Date Modified</strong></td>
+    <td width="70"><strong>Action</strong></td>
+  </tr>
+  <{foreach from=$list item=row key=key}>
+  <tr>
+	  <td colspan="6" height="20"><hr size="1" color="#cccccc" width="100%" /></td>
+  </tr>
+  <tr>
+    <td>
+		<a href="<{$smarty.const.WEBSITE_URL}>news-detail/<{$row.id}>" target="_blank">
+		<{$row.title}>
+		</a>
+	</td>
+	<td>
+		<a href="<{$smarty.const.WEBSITE_URL}>news-detail/<{$row.id}>" target="_blank">
+		<{$row.title_fr}>
+		</a>
+	</td>
+    <td><{$row.date}></td>
+    <td><{$row.date_created}></td>
+    <td><{$row.date_modified}></td>
+    <td>
+        <a href="#" class="edit" rel="<{$row.id}>"><img src="<{$resourceDir}>edit.png" width="30" height="29" /></a>
+        <a href="#" class="delete" rel="<{$row.id}>"><img src="<{$resourceDir}>delete.png" width="30" height="29" /></a>
+    </td>
+  </tr>
+  <{/foreach}>
+</table>
+<{/if}>
+<p align="center"><{$paging}></p>

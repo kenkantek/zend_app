@@ -1,0 +1,26 @@
+<{if count($list) == 0}>
+    No record(s) found
+<{else}>
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+  <tr>
+    <td><strong>Email</strong></td>
+    <td><strong>Name</strong></td>
+    <td><strong>Type</strong></td>
+    <td width="70"><strong>Action</strong></td>
+  </tr>
+  <{foreach from=$list item=row key=key}>
+  <tr>
+	  <td colspan="4" height="20"><hr size="1" color="#cccccc" width="100%" /></td>
+  </tr>
+  <tr>
+    <td><{$row.email}></td>
+	<td><{$row.name}></td>
+    <td><{$helper->getType($row.type)}></td>
+    <td>
+        <a href="#" class="edit" rel="<{$row.id}>"><img src="<{$resourceDir}>edit.png" width="30" height="29" /></a>
+        <a href="#" class="delete" rel="<{$row.id}>"><img src="<{$resourceDir}>delete.png" width="30" height="29" /></a>
+    </td>
+  </tr>
+  <{/foreach}>
+</table>
+<{/if}>

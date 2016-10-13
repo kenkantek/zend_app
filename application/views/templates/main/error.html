@@ -1,0 +1,61 @@
+<{include file=header.html}>
+
+<body>
+<div class="site">
+<div id="wrap">
+
+	<{include file=menu.html}>
+
+    <div id="content-top-strip"></div>
+  <div id="content-wrapper">
+    <div id="content">
+	  <div id="content-inner">
+      <div class="clr"></div>
+
+	    <{if count($slideBanner ) > 0}>
+		<div id="home-main-img">
+			<div id="slide_home">
+				<div class="container">
+					<div class="slides">
+						<{$slideBanner.slides}>
+					</div>
+				</div>
+				 <div class="controls">
+					<a class="previous" href="#">Previous</a>
+					<ul class="pagination">
+						<{$slideBanner.pages}>
+					</ul>
+					<a class="next" href="#">Next</a>
+				</div>
+			</div>
+		</div>
+		<{else}>
+		<div id="home-main-img">
+			<img src="<{$smarty.const.WEBSITE_URL}>images/home.jpg" width="510" height="344" />
+		</div>
+		<{/if}>
+
+        <div id="home-right-col">
+        <div id="btn-project-areas"><a href="<{$modulePath}>page/project-areas/"><img src="<{$smarty.const.WEBSITE_URL}>images/btn-project-areas.jpg" title="Discover our Project Areas" width="245" height="110" border="0" /></a></div>
+        <div id="btn-investor-centre"><a href="<{$modulePath}>page/investor-centre/"><img src="<{$smarty.const.WEBSITE_URL}>images/btn-investor-centre.jpg" title="Visit our Investor Centre" width="245" height="110" border="0" /></a></div>
+        <div id="share-price"></div>
+        </div>
+        <div class="clr"></div>
+        <div id="home-content">
+			<h1>Page not found</h1>
+        </div>
+        <div id="content-right">
+
+			<{include file=latest_news.html}>
+
+			<{include file=subscription_box.html}>
+        </div>
+        </div>
+	  </div>
+     </div>
+   </div>
+   <div class="clr"></div>
+   <{include file=footer.html}>
+</div>
+</body>
+</html>

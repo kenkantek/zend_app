@@ -1,0 +1,43 @@
+<?php /* Smarty version 2.6.22, created on 2015-08-16 05:01:15
+         compiled from form_add_news.html */ ?>
+<form id="frmAdd">
+<table width="100%" cellspacing="2" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+            <td><strong>Date (dd-mm-yyyy)</strong></td>
+            <td><input type="text" id="date" name="date" maxlength="10" /></td>
+          </tr>
+           <tr>
+            <td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+          <tr>
+            <td><strong>Title</strong></td>
+            <td><input type="text" size="50" id="title" name="title"></td>
+          </tr>
+		  <tr>
+            <td><strong>Title French</strong></td>
+            <td><input type="text" size="50" id="title_fr" name="title_fr"></td>
+          </tr>
+          <tr>
+            <td><strong>Content</strong></td>
+            <td>
+                <textarea id="content" name="content"></textarea>
+            </td>
+          </tr>
+		  <tr>
+            <td><strong>Content French</strong></td>
+            <td>
+                <textarea id="content_fr" name="content_fr"></textarea>
+            </td>
+          </tr>
+          <tr>
+			<td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+        <tr>
+            <td align="right" colspan="2">
+                <input type="submit" value="Save" id="submit" name="submit"></td>
+        </tr>
+       </tbody>
+</table>
+</form>
+<div id="savingContent"></div>

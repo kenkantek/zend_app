@@ -1,0 +1,11 @@
+<div id="newsbox"><div id="newstitle"><{$translate->_('LATEST_NEWS')}></div>
+
+	<{foreach from=$uiVar.latestNews item=newsRow}>
+		<div id="newsitem"><{$newsRow.date}>
+			<br />
+			<a href="<{$modulePath}>news-detail/<{$newsRow.id}>"><{$newsRow.title|truncate:35}></a>
+		</div>
+	<{/foreach}>
+
+
+</div>

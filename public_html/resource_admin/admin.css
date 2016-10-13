@@ -1,0 +1,395 @@
+@charset "utf-8";
+/*
+SolGold
+Author: Linda Keayes
+Author URL: http://www.aecreative.com.au
+*/
+
+.bluetext {
+	color:#414141;
+}
+
+a:link {
+	color:#111;
+	text-decoration:none;
+	font-weight: bold;
+}
+
+a:active {
+	color:#111;
+	text-decoration:none;
+	font-weight: bold;
+}
+
+a:visited {
+	color:#111;
+	text-decoration:none;
+	font-weight: bold;
+}
+
+a:hover {
+	color:#111;
+	text-decoration:underline;
+	font-weight: bold;
+}
+
+body {
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#111;
+}
+
+#boxlinks {
+	height:80px;
+	background:url(../resource_admin/boxlinks.png);
+	padding:28px 0 24px 0;
+}
+
+#admin-banner {
+	height:60px;
+	margin-top: 40px;
+	width: 940px;
+	margin:0 auto;
+}
+
+.clr {
+	clear:both;
+}
+
+.doubledot {
+	background:url(../resource_admin/doubledot.png) repeat-x;
+	width:957px;
+	height:6px;
+}
+
+#footer {
+/*	background:url(../resource_admin/footer.png) repeat-x #89163b;*/
+	background-color: #C0311A;
+	min-height:207px;
+	padding:15px 0 0 0;
+}
+
+
+#footer td {
+	color:#FFF;
+	font-size:11px;
+}
+
+#footer th {
+	text-align:left;
+	padding:0px 0px 10px 0;
+}
+
+#header {
+	width:957px;
+	height:102px;
+}
+
+#pagelist-top {
+	float:right;
+	width:740px;
+	height: 12px;
+	background:url(../resource_admin/pagelist-top.png) repeat-y;
+	margin:0 8px 0 8px;
+}
+
+#pagelist {
+	float:right;
+	width:740px;
+	background:url(../resource_admin/pagelist.png) repeat-y;
+	margin:0 8px 0 8px;
+}
+
+#adminsubnav {
+	float:left;
+	width:150px;
+	background:url(../resource_admin/admin-bg.png) repeat-y;
+	margin:0 8px 0 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#adminsubnav-top {
+	float:left;
+	width:170px;
+	height: 12px;
+	background:url(../resource_admin/admin-top.png) top left no-repeat;
+	margin:0 8px 0 8px;
+}
+#adminsubnav-bottom {
+	float:left;
+	width:170px;
+	height: 52px;
+	background:url(../resource_admin/admin-bottom.png) repeat-y;
+	margin:0 8px 0 8px;
+}
+
+
+.pagelistbottom {
+	background:url(../resource_admin/pagelist-bottom.png) bottom left no-repeat;
+	width:740px;
+	height:52px;
+}
+
+.homeboxcon {
+	padding:0 15px 10px 15px;
+	min-height:295px;
+}
+.homeboxcon a {
+	color: #f78e1e;
+	font-weight: bold;
+}
+.homeboxcon a:hover {
+	color: #f78e1e;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.homeboxcon h3 {
+	background:url(../resource_admin/headerdot.png) bottom left repeat-x;
+	color:#FFF;
+	font-size:18px;
+	padding:0 0 10px 0;
+}
+
+.homeboxcon h4 {
+	color:#000;
+	font-size:16px;
+	margin:10px 0 0 0;
+	padding:0;
+}
+
+img {
+	border:0;
+}
+#submenu {
+
+}
+#submenu a {
+	color: #111;
+	text-decoration: none;
+	font-weight: normal;
+}
+#submenu a:hover {
+	color: #111;
+	text-decoration: none;
+	font-weight: normal;
+}
+#navmenu {
+	height:27px;
+	background:url(../resource_admin/navmenu.png);
+	color:#FFFFFF;
+	font-size:15px;
+	font-weight:bold;
+	text-align:center;
+	padding:10px;
+	margin:0 0 15px 0;
+}
+
+#navmenu a:link {
+	text-decoration:none;
+	color:#FFF;
+}
+
+#navmenu a:active {
+	text-decoration:none;
+	color:#FFF;
+}
+
+#navmenu a:visited {
+	text-decoration:none;
+	color:#FFF;
+}
+
+#navmenu a:hover {
+	text-decoration:none;
+	color:#f78e1e;
+}
+
+#navmenu li {
+	display:inline;
+	margin:0;
+	padding:0 28px 0 31px;
+}
+
+#navmenu ul {
+	margin:0 9px 0 0;
+	padding:0;
+}
+
+#newsletter {
+	width:277px;
+	height:112px;
+	background:#000;
+	color:#FFF;
+	margin-top:16px;
+	float:right;
+	padding:0px 18px 10px 13px;
+}
+
+p {
+	line-height:140%;
+}
+
+.wrap {
+	margin:0 auto;
+	width:957px;
+}
+
+.wrap1 {
+	margin:0 auto;
+	min-width:957px;
+}
+
+.homeboxcon li {
+	list-style:none;
+	margin:0;
+	padding:0 0 0 5px;
+	line-height:30px;
+	border-bottom:1px solid #9a9a9a;
+	border-top:1px solid #9a9a9a;
+}
+
+.homeboxcon li:hover{
+	background:#FFF;
+}
+
+.homeboxcon ul, .homeboxcon ul {
+	border-bottom:1px solid #9a9a9a;
+	border-top:1px solid #9a9a9a;
+	margin:0 0 10px 0;
+	padding:0;
+}
+
+.menuselected {
+	background:#FFF;
+}
+
+#contentbox {
+	width:623px;
+	float:left;
+}
+
+#contentbox h3 {
+	background:url(../resource_admin/headerdot2.png) bottom left repeat-x;
+	color:#1A76B5;
+	font-size:18px;
+	padding:0 0 10px 0;
+	margin:0;
+}
+
+#contentarea {
+	min-height:295px;
+	background:url(../resource_admin/contentbox.png) top left repeat-y;
+	padding:6px 20px 20px 20px;
+}
+
+#contentarea p {
+	margin-bottom:0;
+}
+
+#contentbox_top {
+	width:623px;
+	height:12px;
+	background:url(../resource_admin/contentbox_top.png);
+}
+
+#contentbox_bottom {
+	width:623px;
+	height:52px;
+	background:url(../resource_admin/contentbox_bottom.png);
+}
+.newsletterboxes {
+	height: 15px;
+	width: 270px;
+	color: #59585d;
+}
+
+#footerleftcol {
+	width: 120px;
+	float: left;
+	text-align: left;
+}
+
+.footertitle {
+	color: #111111;
+	padding:0 0 10px 0;
+	font-weight: bold;
+    font-size: 12px;
+}
+#footerwhite {
+	color: #FFFFFF;
+	margin-bottom: 5px;
+	width: 155px;
+	float: left;
+	text-align: left;
+}
+#message{
+	height:30px;
+	background-color:#FFFFCC ;
+	font-size:13px;
+	color:red;
+	display:none;
+	padding-top:10px;
+	padding-left:10px;
+}
+
+.whiteBg
+{
+    background: #FFFFFF;
+}
+.field{
+    width: 140px; font-size: 10px;
+}
+.textField{
+    font-size: 10px;
+}
+
+/* for paging */
+
+.pageNum{
+	font-weight: bold;
+	text-decoration: none;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.currentPage{
+	font-weight: bold;
+	text-decoration: none;
+	color: #89163b;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+/* for ajax upload button */
+.wrapper { width: 133px; margin: 0 auto; float:left;}
+div.button {
+		height: 22px;
+		width: 110px;
+		background: url('../resource_admin/button.png') 0 0;
+		margin-top: 10px;
+		font-size: 12px;
+		color: #FFFFFF;
+		text-decoration: none;
+		text-align: center;
+		text-transform: capitalize;
+		padding-top: 5px;
+	}
+	/*
+	We can't use ":hover" preudo-class because we have
+	invisible file input above, so we have to simulate
+	hover effect with JavaScript.
+	 */
+	div.button.hover {
+		background: url('../resource_admin/button.png') 0 0;
+		font-size: 12px;
+		color: #c0c0c0;
+		text-decoration: none;
+		text-transform: capitalize;
+		padding-top: 5px;
+		text-align: center;
+	}
+
+	#albumSearch{
+		width: 80px;
+	}

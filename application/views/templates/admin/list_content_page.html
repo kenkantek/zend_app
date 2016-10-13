@@ -1,0 +1,40 @@
+<{if count($list) == 0}>
+    No child page found
+<{else}>
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+  <tr>
+    <td><strong>Title</strong></td>
+	<td><strong>Title French</strong></td>
+    <td><strong>Date Created</strong></td>
+    <td><strong>Date Modified</strong></td>
+    <td><strong>Child(s)</strong></td>
+    <td width="80"><strong>Page Order</strong></td>
+    <td width="70"><strong>Action</strong></td>
+  </tr>
+  <{foreach from=$list item=row key=key}>
+  <tr>
+	  <td colspan="7" height="20"><hr size="1" color="#cccccc" width="100%" /></td>
+  </tr>
+  <tr>
+    <td><{$row.title}></td>
+	<td><{$row.title_fr}></td>
+    <td><{$row.date_created}></td>
+    <td><{$row.date_modified}></td>
+    <td><{$row.childs}></td>
+    <td>
+		<{if $row.parent_id != 0}>
+		<a href="#" class="up" rel="<{$row.id}>"><img src="<{$resourceDir}>up.png" width="30" height="30" /></a>
+        <a href="#" class="down" rel="<{$row.id}>"><img src="<{$resourceDir}>down.png" width="30" height="30" /></a>
+		<{/if}>
+    </td>
+    <td>
+        <a href="#" class="edit" rel="<{$row.id}>"><img src="<{$resourceDir}>edit.png" width="30" height="29" /></a>
+
+        <{if $row.parent_id != 0}>
+            <a href="#" class="delete" rel="<{$row.id}>"><img src="<{$resourceDir}>delete.png" width="30" height="29" /></a>
+        <{/if}>
+    </td>
+  </tr>
+  <{/foreach}>
+</table>
+<{/if}>

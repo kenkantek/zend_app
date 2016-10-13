@@ -1,0 +1,69 @@
+<{include file=header.html}>
+
+<body>
+<div class="site">
+<div id="wrap">
+
+	<{include file=menu.html}>
+
+    <div id="content-top-strip"></div>
+  <div id="content-wrapper">
+    <div id="content">
+	  <div id="content-inner">
+      <div class="clr"></div>
+	    <div style="float: left; height: 186px; margin-bottom: 20px;width: 778px;">
+			<img src="<{$smarty.const.WEBSITE_URL}>images/gallery_banner.png" />
+		</div>
+        <div class="clr"></div>
+        <div class="clr"></div>
+        <div id="home-content">
+
+			<{if count($listAlbum) > 0}>
+			<div class="boxGallery">
+
+				<ul>
+				<{foreach from=$listAlbum item=row}>
+
+				<li>
+					<a class="popupImage" rel="<{$row.id}>" href="#">
+						<img src="<{$galleryHelper->getImageUrl($row.image)}>" width="<{$smarty.const.ALBUM_IMAGE_WIDTH}>" height="<{$smarty.const.ALBUM_IMAGE_HEIGHT}>"/>
+						<br/>
+						<h1><{$row.name}></h1>
+					</a>
+				</li>
+
+				<{/foreach}>
+				</ul>
+
+				<div class="clr"></div>
+
+			</div>
+			<{else}>
+			No album to show.
+			<{/if}>
+
+
+        </div>
+        <div id="content-right">
+
+			<div id="home-right-col">
+				<div id="btn-project-areas"><a href="<{$modulePath}>page/project-areas/"><img src="<{$smarty.const.WEBSITE_URL}>images/btn-project-areas.jpg" title="Discover our Project Areas" border="0" /></a></div>
+			</div>
+
+			<{include file=latest_news.html}>
+
+			<{include file=subscription_box.html}>
+        </div>
+        </div>
+	  </div>
+     </div>
+   </div>
+   <div class="clr"></div>
+   <{include file=footer.html}>
+</div>
+	<div id="galleryContainerTemp" style="display: none">
+
+	</div>
+</body>
+<script src="<{$smarty.const.WEBSITE_URL}>js/gallery.js?v=<{$smarty.const.APPLICATION_VERSION}>" type="text/javascript"></script>
+</html>

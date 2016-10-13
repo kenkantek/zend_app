@@ -1,0 +1,84 @@
+<div id="header">
+    <div id="logo"><a href="<{$smarty.const.WEBSITE_URL}>"><img src="<{$smarty.const.WEBSITE_URL}>images/logo.png" title="Iron Ridge" border="0" /></a></div>
+	   <div id="search">
+		   <{if $staffLogged}>
+		   <a href="<{$modulePath}>staff/">Welcome <{$staffInfo.firstname}></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="<{$modulePath}>logout/">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   <{/if}>
+		   <input name="searchTextTop" type="text" class="searchbox" id="searchTextTop" value="<{$translate->_('SEARCH_BOX')}>" />
+	   </div>
+       <div id="navigation">
+           <div class="chromestyle" id="chromemenu">
+			<ul>
+				<!-- we use hard code ,since css use id, bad -->
+			<li><a href="<{$modulePath}>"><div id="home" title="Home"></div></a></li>
+			<li><a href="<{$modulePath}>page/about-us/"  rel="dropmenu1"><div id="about" title="About Us"></div></a></li>
+			<li><a href="<{$modulePath}>page/project-areas/" rel="dropmenu2"><div id="project" title="Project Areas"></div></a></li>
+			<li><a href="<{$modulePath}>page/aim-rule-26-info/" rel="dropmenu3"><div id="aim" title="AIM Rule 26 Info"></div></a></li>
+			<li><a href="<{$modulePath}>page/media-centre/" rel="dropmenu4"><div id="csr" title="CSR"></div></a></li>
+			<li><a href="<{$modulePath}>page/investor-centre/" rel="dropmenu5"><div id="investor" title="Investor Centre"></div></a></li>
+			<li><a href="<{$modulePath}>page/contact-us/" rel="dropmenu6"><div id="contact" title="Contact Us"></div></a></li>
+			<li><a href="<{$modulePath}>gallery/"><div id="gallery" title="Gallery"></div></a></li>
+
+			</ul>
+           </div>
+           <div class="clr"></div>
+   	   </div>
+   		<div class="clr"></div>
+
+
+		<{if count($uiVar.subMenuOfAboutUs) }>
+        <div class="dropmenudiv" id="dropmenu1">
+			<{foreach from=$uiVar.subMenuOfAboutUs item=subMenu}>
+			<a href="<{$modulePath}>page/about-us/<{$subMenu.page_unique_title}>/"><{$subMenu.title}></a>
+			<{/foreach}>
+		</div>
+		<{/if}>
+
+		<{if count($uiVar.subMenuOfProjectAreas) }>
+        <div class="dropmenudiv" id="dropmenu2">
+			<{foreach from=$uiVar.subMenuOfProjectAreas item=subMenu}>
+			<a href="<{$modulePath}>page/project-areas/<{$subMenu.page_unique_title}>/"><{$subMenu.title}></a>
+			<{/foreach}>
+		</div>
+		<{/if}>
+
+		<{if count($uiVar.subMenuOfAIMRule26Info) }>
+        <div class="dropmenudiv" id="dropmenu3">
+			<{foreach from=$uiVar.subMenuOfAIMRule26Info item=subMenu}>
+			<a href="<{$modulePath}>page/aim-rule-26-info/<{$subMenu.page_unique_title}>/"><{$subMenu.title}></a>
+			<{/foreach}>
+		</div>
+		<{/if}>
+
+		<{if count($uiVar.subMenuOfMediaCentre) }>
+        <div class="dropmenudiv" id="dropmenu4">
+			<{foreach from=$uiVar.subMenuOfMediaCentre item=subMenu}>
+			<a href="<{$modulePath}>page/media-centre/<{$subMenu.page_unique_title}>/"><{$subMenu.title}></a>
+			<{/foreach}>
+		</div>
+		<{/if}>
+
+		<{if count($uiVar.subMenuOfInvestorCentre) }>
+        <div class="dropmenudiv" id="dropmenu5">
+			<{foreach from=$uiVar.subMenuOfInvestorCentre item=subMenu}>
+			<a href="<{$modulePath}>page/investor-centre/<{$subMenu.page_unique_title}>/"><{$subMenu.title}></a>
+			<{/foreach}>
+		</div>
+		<{/if}>
+
+		<{if count($uiVar.subMenuOfContactUs) }>
+        <div class="dropmenudiv" id="dropmenu6">
+			<{foreach from=$uiVar.subMenuOfContactUs item=subMenu}>
+			<a href="<{$modulePath}>page/contact-us/<{$subMenu.page_unique_title}>/"><{$subMenu.title}></a>
+			<{/foreach}>
+		</div>
+		<{/if}>
+
+        <script type="text/javascript">
+
+            cssdropdown.startchrome("chromemenu")
+
+        </script>
+
+    <div class="clr"></div>
+  </div>

@@ -1,0 +1,56 @@
+<form id="frmAdd">
+<table width="100%" cellspacing="2" cellpadding="0" border="0">
+          <tbody><tr>
+            <td><strong>Type</strong></td>
+            <td><{$row.type}></td>
+          </tr>
+           <tr>
+            <td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+          <tr>
+            <td><strong>Title</strong></td>
+            <td><input type="text" size="50" id="title" name="title" value="<{$row.title|escape:'html'}>"></td>
+          </tr>
+		  <tr>
+            <td><strong>Title French</strong></td>
+            <td><input type="text" size="50" id="title" name="title_fr" value="<{$row.title_fr|escape:'html'}>"></td>
+          </tr>
+		  <tr>
+			  <td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+          <tr>
+            <td><strong>Content</strong></td>
+            <td>
+                <textarea id="content" name="content"><{$row.content}></textarea>
+            </td>
+          </tr>
+		   <tr>
+            <td><strong>Content French</strong></td>
+            <td>
+                <textarea id="content_fr" name="content_fr"><{$row.content_fr}></textarea>
+            </td>
+          </tr>
+          <tr>
+			  <td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+		  <{if $row.type == 'home'}>
+		  <tr>
+            <td><strong>Link</strong></td>
+            <td><input type="text" size="40" id="link" name="link" value="<{$row.link}>"> (leaving this field empty will automatically this page link internally)</td>
+          </tr>
+		  <{/if}>
+		  <tr>
+			  <td colspan="2" height="20"><hr size="1" color="#ccccc"></td>
+          </tr>
+        <tr>
+            <td align="right" colspan="2">
+                <input type="submit" value="Update" id="submit" name="submit">
+                <input type="button" value="Reset" id="resetFormEdit" name="resetFormEdit">
+            </td>
+        </tr>
+       </tbody>
+</table>
+    <input type="hidden" value="<{$row.id}>" name="current_page_id" id="current_page_id" />
+	<input type="hidden" value="<{$row.page_unique_title}>" name="current_unique_title" id="current_unique_title" />
+</form>
+<div id="savingContent"></div>
